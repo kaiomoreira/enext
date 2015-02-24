@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var gutil = require('gutil');
 var coffee = require('gulp-coffee');
 var jade = require('gulp-jade');
-// var sass = require('gulp-sass');
+var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 
@@ -42,6 +42,6 @@ gulp.task('img', function() {
     .pipe(gulp.dest('./build/img'));
 });
 
-gulp.task('default', ['coffee', 'templates', 'img'], function() {
+gulp.task('default', ['sass', 'coffee', 'templates', 'img'], function() {
   console.log('done');
 });
